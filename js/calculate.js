@@ -3,6 +3,7 @@ function getInputValue(product){
     const productNumber = parseFloat(productInput.value);
     const card = document.getElementById('card');
     if(productNumber == 'number' || productNumber > 0){
+        card.style.display = 'none';
         return productNumber;
     }
     else{
