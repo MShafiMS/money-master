@@ -9,8 +9,6 @@ function getInputValue(product){
     else{
         card.style.display = 'block';
     }
-    
-    
 }
 function getCurrentBalance() {
     const balanceTotal = document.getElementById('balance');
@@ -18,6 +16,8 @@ function getCurrentBalance() {
     const previousBalanceTotal = parseFloat(balanceTotalText);
     return previousBalanceTotal;
 }
+//-------------------------income and expenses part start ------------------------
+
 document.getElementById('calculate').addEventListener('click', function calculateTotal(){
     const income = getInputValue('income');
     const foodExpenses = getInputValue('food');
@@ -31,8 +31,11 @@ document.getElementById('calculate').addEventListener('click', function calculat
     const balance = income - expensesTotal;
     document.getElementById('balance').innerText = balance;
 
-    
 })
+
+// -----------------------income and expenses part end-------------------------
+
+//-----------------------------savings part start-----------------------
 
 document.getElementById('save').addEventListener('click', function(){
     const income = getInputValue('income');
@@ -50,5 +53,9 @@ document.getElementById('save').addEventListener('click', function(){
     const remainBalance = myBalance - savingAmount;
 
     myRemainBalance.innerText = remainBalance;
-    console.log(remainBalance);
+
+    
 })
+
+
+//------------------------------savings part end--------------------------
